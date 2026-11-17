@@ -1,0 +1,87 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@600;700;800&display=swap');
+
+:root {
+  font-family: 'DM Sans', sans-serif;
+  color: #20352a;
+  background: #f7f8f3;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  font-smooth: always;
+  font-weight: 400;
+  --green: #214d35;
+  --green-dark: #173d2b;
+  --sage: #e9efe5;
+  --cream: #f7f8f3;
+  --muted: #6e7d72;
+}
+* { box-sizing: border-box; }
+body { margin: 0; min-width: 320px; background: var(--cream); }
+button, a { font: inherit; }
+a { color: inherit; text-decoration: none; }
+button { cursor: pointer; }
+.landing-page {
+  min-height: 100vh; position: relative; overflow: hidden; display: flex; align-items: center;
+  color: white; background-image: url('https://images.unsplash.com/photo-1494438639946-1ebd1d20bf85?auto=format&fit=crop&w=2200&q=90');
+  background-size: cover; background-position: center;
+}
+.landing-overlay { position: absolute; inset: 0; background: linear-gradient(90deg, rgba(12,37,25,.88) 0%, rgba(17,48,32,.68) 48%, rgba(17,48,32,.12) 100%); }
+.landing-content { position: relative; z-index: 1; width: min(760px, 90%); margin-left: clamp(28px, 10vw, 160px); padding: 70px 0; }
+.brand-mark { display: flex; align-items: center; gap: 12px; font-weight: 700; letter-spacing: .16em; font-size: 13px; }
+.eyebrow { margin: 78px 0 16px; color: #d8e6d7; text-transform: uppercase; letter-spacing: .2em; font-size: 11px; font-weight: 700; }
+.landing-content h1 { font: 700 clamp(52px, 7vw, 88px)/1.05 'Playfair Display', serif; margin: 0; letter-spacing: -.035em; }
+.landing-content h1 em { color: #c4d8b8; }
+.landing-copy { max-width: 440px; line-height: 1.8; color: #e0e9df; margin: 26px 0 32px; }
+.primary-button, .solid-button { display: inline-flex; align-items: center; gap: 26px; border: 0; border-radius: 4px; padding: 15px 22px; background: #d7e5c9; color: #173d2b; font-weight: 700; transition: .2s; }
+.primary-button:hover, .solid-button:hover { background: #c2d7b2; transform: translateY(-1px); }
+.landing-note { margin-top: 82px; font-size: 10px; letter-spacing: .2em; color: #d4e0d2; }
+.landing-bottom { position: absolute; bottom: 28px; right: 34px; z-index: 1; font-size: 9px; letter-spacing: .18em; color: #e4ece1; }
+.site-header { height: 76px; background: #fff; display: flex; align-items: center; justify-content: space-between; padding: 0 clamp(20px, 6vw, 88px); border-bottom: 1px solid #e9eee7; position: sticky; top: 0; z-index: 10; }
+.site-logo { display: flex; align-items: center; gap: 9px; color: var(--green); font-weight: 700; letter-spacing: .11em; font-size: 12px; }
+.site-nav { display: flex; align-items: center; gap: clamp(16px, 3vw, 38px); color: #526458; font-size: 14px; font-weight: 600; }
+.site-nav a:hover, .site-nav a.active { color: var(--green); }
+.cart-link { display: flex; align-items: center; gap: 8px; }
+.cart-count { display: inline-grid; place-items: center; min-width: 21px; height: 21px; padding: 0 5px; border-radius: 99px; background: var(--green); color: white; font-size: 11px; }
+.page-shell { max-width: 1240px; padding: 48px 28px 80px; margin: auto; }
+.page-heading { margin-bottom: 34px; }
+.page-heading .eyebrow { margin: 0 0 10px; color: #728374; }
+.page-heading h1 { font: 700 clamp(34px, 4vw, 48px) 'Playfair Display', serif; color: #203d2c; margin: 0 0 10px; }
+.page-heading p { color: var(--muted); margin: 0; line-height: 1.7; }
+.category-section { margin: 42px 0; }
+.category-title { font: 700 27px 'Playfair Display', serif; margin: 0 0 18px; color: #294936; }
+.plant-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 22px; }
+.plant-card { background: white; border: 1px solid #e8ede6; border-radius: 8px; overflow: hidden; box-shadow: 0 5px 18px rgba(29,57,38,.045); }
+.plant-image { width: 100%; height: 220px; object-fit: cover; display: block; background: #e8eee5; }
+.plant-info { padding: 17px; }
+.plant-info h3 { margin: 0 0 7px; font: 700 20px 'Playfair Display', serif; }
+.plant-info p { color: var(--muted); font-size: 13px; line-height: 1.55; min-height: 40px; margin: 0 0 14px; }
+.plant-card-footer { display: flex; align-items: center; justify-content: space-between; gap: 10px; }
+.price { color: var(--green); font-weight: 700; }
+.add-button { border: 1px solid var(--green); color: white; background: var(--green); border-radius: 4px; padding: 10px 13px; font-size: 12px; font-weight: 700; }
+.add-button:hover { background: #173d2b; }
+.add-button:disabled { background: #e7eee5; color: #718174; border-color: #e7eee5; cursor: not-allowed; }
+.about-panel { background: white; border-radius: 10px; padding: clamp(24px, 5vw, 58px); display: grid; grid-template-columns: 1.1fr .9fr; gap: 42px; align-items: center; }
+.about-panel img { width: 100%; height: 350px; object-fit: cover; border-radius: 7px; }
+.about-panel h1 { font: 700 44px 'Playfair Display', serif; margin: 0 0 18px; }
+.about-panel p { line-height: 1.85; color: var(--muted); }
+.cart-layout { display: grid; grid-template-columns: 1fr 320px; gap: 28px; align-items: start; }
+.cart-list { display: grid; gap: 14px; }
+.cart-row { display: grid; grid-template-columns: 112px 1fr auto; gap: 18px; padding: 15px; background: white; border: 1px solid #e8ede6; border-radius: 8px; align-items: center; }
+.cart-row img { width: 112px; height: 105px; object-fit: cover; border-radius: 5px; }
+.cart-row h3 { font: 700 19px 'Playfair Display', serif; margin: 0 0 6px; }
+.cart-row p { color: var(--muted); font-size: 13px; margin: 0 0 8px; }
+.quantity-control { display: inline-flex; align-items: center; gap: 12px; border: 1px solid #e4eae2; padding: 5px 8px; border-radius: 4px; }
+.quantity-control button { border: 0; background: transparent; color: var(--green); font-size: 18px; line-height: 1; }
+.delete-button { border: 0; background: transparent; color: #a34d43; margin-left: 12px; font-size: 12px; font-weight: 700; }
+.line-total { font-weight: 700; color: var(--green); white-space: nowrap; }
+.summary-card { background: white; border: 1px solid #e8ede6; border-radius: 8px; padding: 23px; position: sticky; top: 98px; }
+.summary-card h2 { font: 700 24px 'Playfair Display', serif; margin: 0 0 22px; }
+.summary-line { display: flex; justify-content: space-between; margin: 13px 0; color: #617064; font-size: 14px; }
+.summary-total { border-top: 1px solid #e8ede6; padding-top: 17px; margin-top: 18px; font-size: 17px; color: #203d2c; font-weight: 700; }
+.full-button { width: 100%; justify-content: center; margin-top: 12px; }
+.secondary-button { display: block; text-align: center; margin-top: 16px; color: var(--green); font-size: 13px; font-weight: 700; }
+.empty-cart { background: white; border: 1px dashed #cbd8c9; border-radius: 9px; padding: 58px 20px; text-align: center; }
+.empty-cart h2 { font: 700 28px 'Playfair Display', serif; }
+.empty-cart p { color: var(--muted); }
+.site-footer { padding: 28px; text-align: center; color: #819084; font-size: 12px; border-top: 1px solid #e8ede6; }
+@media (max-width: 850px) { .plant-grid { grid-template-columns: repeat(2, minmax(0,1fr)); } .cart-layout { grid-template-columns: 1fr; } .summary-card { position: static; } }
+@media (max-width: 600px) { .site-header { height: auto; min-height: 70px; padding: 15px 18px; align-items: flex-start; gap: 14px; } .site-logo span { display: none; } .site-nav { gap: 13px; font-size: 12px; flex-wrap: wrap; justify-content: flex-end; } .plant-grid { grid-template-columns: 1fr; } .plant-image { height: 250px; } .about-panel { grid-template-columns: 1fr; } .about-panel img { height: 240px; } .cart-row { grid-template-columns: 82px 1fr; gap: 12px; } .cart-row img { width: 82px; height: 90px; } .line-total { grid-column: 2; } .landing-content { margin-left: 25px; } .landing-bottom { left: 25px; right: auto; } }
